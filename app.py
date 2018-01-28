@@ -19,28 +19,32 @@ db =SQLAlchemy(app)
 def index():
 	return "Hello World"
 #user routes
-@app.route('/signup')
+@app.route('/api/v1')
 def signup():
  	return render_template('signup.html')
 
-@app.route('/login')
+@app.route('/api/v2')
 def login():
  	return render_template('login.html')
 
-@app.route('/make_request')
+@app.route('/api/v3')
 def make_request():
 	return render_template('make_request.html')
 
-@app.route('/user_requests')
+@app.route('/api/v4')
 def user_requests():
 	return render_template('user_requests.html')
 #admin routes
-@app.route('/requests')
+@app.route('/api/v5')
 def requests():
  	return render_template('requests.html')
-@app.route('/resolve')
+@app.route('/api/v6')
 def resolve():
  	return render_template('resolve.html')
+
+ # api endpoints
+
+
 
 
 
