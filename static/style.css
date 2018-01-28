@@ -78,9 +78,12 @@ body{
 
 .request{
 	background: white;
-	border-style: solid;
-	border-color: green;
+	/*border-style: solid;*/
+	box-shadow: 0px 0px 10px blue;
 	margin-top: 30px;
+	margin-left: 20px;
+	width: 90%;
+
 }
 .request h1{
 	text-align: center;
@@ -88,13 +91,19 @@ body{
 }
 .request button{
 	margin-left: 10px;
+	margin-bottom: 20px;
 }
 .request p{
 	font-weight: bold;
 }
+.requests{
+	
+	
+	margin-bottom: 20px;
+}
 
 form{
-	
+
 }
 
 form input{
