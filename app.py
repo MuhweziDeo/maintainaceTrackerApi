@@ -34,6 +34,7 @@ def make_request():
 @app.route('/api/v4')
 def user_requests():
 	return render_template('user_requests.html')
+
 #admin routes
 @app.route('/api/v5')
 def requests():
@@ -43,8 +44,27 @@ def resolve():
  	return render_template('resolve.html')
 
  # api endpoints
+# USERS
 
+@app.route('/api/v4/users/requests', methods=['GET'])
+def get_all_requests():
+	# get all requests of logged in users
+	return ''
 
+@app.route('/api/v4/users/requests/<request_id>', methods=['GET'])
+def get_one_request(request_id):
+	# get a single request
+	return ''
+
+@app.route('/api/v4/users/request', methods=['POST'])
+def create_request():
+	# create a request
+	return ''
+
+@app.route('/api/v4/users/requests/<request_id>', methods=['PUT'])
+def modify_request(request_id):
+	# modify a request
+	return ''
 
 
 
