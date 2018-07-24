@@ -19,49 +19,52 @@ db =SQLAlchemy(app)
 def index():
 	return "Hello World"
 #user routes
-@app.route('/api/v1')
+@app.route('/signup')
 def signup():
  	return render_template('signup.html')
 
-@app.route('/api/v2')
+@app.route('/login')
 def login():
  	return render_template('login.html')
 
-@app.route('/api/v3')
+@app.route('/make_request')
 def make_request():
 	return render_template('make_request.html')
 
-@app.route('/api/v4')
+@app.route('/user_requests')
 def user_requests():
 	return render_template('user_requests.html')
 
 #admin routes
-@app.route('/api/v5')
+@app.route('/requests')
 def requests():
  	return render_template('requests.html')
-@app.route('/api/v6')
+@app.route('/resolve')
 def resolve():
  	return render_template('resolve.html')
 
  # api endpoints
+ 
 # USERS
 
-@app.route('/api/v4/users/requests', methods=['GET'])
+@app.route('/api/v1/users/requests', methods=['GET'])
 def get_all_requests():
 	# get all requests of logged in users
 	return ''
 
-@app.route('/api/v4/users/requests/<request_id>', methods=['GET'])
+@app.route('/api/v1/users/requests/<request_id>', methods=['GET'])
 def get_one_request(request_id):
 	# get a single request
 	return ''
 
-@app.route('/api/v4/users/request', methods=['POST'])
+@app.route('/api/v1/users/request', methods=['POST'])
 def create_request():
 	# create a request
+	data=request.get_json()
+	
 	return ''
 
-@app.route('/api/v4/users/requests/<request_id>', methods=['PUT'])
+@app.route('/api/v1/users/requests/<request_id>', methods=['PUT'])
 def modify_request(request_id):
 	# modify a request
 	return ''
